@@ -6,6 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Unpack project zip
+        run: unzip -o '*.zip'
       - uses: actions/setup-java@v4
         with:
           java-version: 21
